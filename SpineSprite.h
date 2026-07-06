@@ -40,7 +40,7 @@
 #else
 #include "scene/2d/node_2d.h"
 #if VERSION_MAJOR > 3
-#include "servers/rendering/rendering_server.h"
+#include "servers/rendering_server.h"
 #endif
 #endif
 
