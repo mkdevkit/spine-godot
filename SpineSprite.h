@@ -39,8 +39,13 @@
 #include <godot_cpp/classes/canvas_item_material.hpp>
 #else
 #include "scene/2d/node_2d.h"
-#if VERSION_MAJOR > 3
+#include "core/version.h"
+#if GODOT_VERSION_MAJOR > 3
+#if GODOT_VERSION_MAJOR > 4 || (GODOT_VERSION_MAJOR == 4 && GODOT_VERSION_MINOR >= 6)
+#include "servers/rendering/rendering_server.h"
+#else
 #include "servers/rendering_server.h"
+#endif
 #endif
 #endif
 
